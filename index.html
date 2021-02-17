@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <script defer src="js/all.min.js"></script>
+    <title>Flower</title>
+    <style>
+    .ymaps-2-1-78-ground-pane, .ymaps-2-1-78-copyrights-pane, .ymaps-2-1-78-controls-pane{
+        filter: grayscale(95%);
+    }
+    </style>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__left">
+                <img class="header__logo"
+                     src="/img/logo.jpg"
+                     alt="Логотип"
+                     srcset="/img/logo.jpg,
+                             /img/logo.jpg"
+            >
+            <p class="header__slogan">студиа<br /> флористики и<br /> фитодизайна</p>
+            <ul class="header__socials socials">
+                <li class="socials__element">
+                    <a class="socials__link" aria-label="Facebook" href="#">
+                        <svg class="socials__facebook">
+                            <use xlink:href="/img/symbol/sprite.svg#fb"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__element">
+                    <a class="socials__link" aria-label="Twitter" href="#">
+                        <svg class="socials__twitter">
+                            <use xlink:href="/img/symbol/sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__element">
+                    <a class="socials__link" aria-label="Linkedin" href="#">
+                        <svg class="socials__linkedin">
+                            <use xlink:href="/img/symbol/sprite.svg#linked"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__element">
+                    <a class="socials__link" aria-label="Google plus" href="#">
+                        <svg class="socials__google">
+                            <use xlink:href="/img/symbol/sprite.svg#google"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            </div>
+            <div class="header__right">
+                <p class="header__address">Москва <br />ул. Первая, <br />д. 1, корп. 1</p>
+                <p class="header__contacts">
+                    <a class="header__tel" href="tel: +74950000000">+7 (495) 000 00 00</a>
+                    <br />
+                    <a class="header__mail" href="mailto:ingo@flower.ru">info@flawer.ru</a>
+                </p>
+
+            </div>
+        </header>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__element">
+                    <a href="#" class="menu__link">Главная</a>
+                </li>
+                <li class="menu__element">
+                    <a href="#" class="menu__link">Услуги</a>
+                </li>
+                <li class="menu__element">
+                    <a href="#" class="menu__link">Студиа</a>
+                </li>
+                <li class="menu__element">
+                    <a href="#" class="menu__link">Блог</a>
+                </li>
+                <li class="menu__element">
+                    <a href="#" class="menu__link">Контакты</a>
+                </li>
+            </ul>
+            <button class="menu__hamburger hamburger" aria-label="Кнопка меню">
+                <span class="hamburger__element"></span>
+            </button>
+        </nav>
+        <section class="projects">
+            <div class="projects__element projects__element--one">
+                <h1 class="projects__title">Услуги</h1>
+                <p class="projects__description"></p>
+            </div>
+            <div class="projects__element projects__element--two">
+                <div class="projects__info">
+                    <h2 class="projects__name">Элементы декора</h2>
+                    <p class="projects__description">Орингинальные флористические композиции для создания дизайна интерьеров</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--three">
+                <div class="projects__info">
+                    <h2 class="projects__name">Сухоцветы</h2>
+                    <p class="projects__description">Большой выбор сухоцветов, которые прослужат украшением иньерьера долгие годы</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--fore">
+                <div class="projects__info">
+                    <h2 class="projects__name">Живые растения</h2>
+                    <p class="projects__description">Большой ассортимент многолетних растений из собственной оранжереи</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--five">
+                <div class="projects__info">
+                    <h2 class="projects__name">Фитодизайн</h2>
+                    <p class="projects__description">Дизайн интерьеров в стиле эко-минимализм</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--six">
+                <div class="projects__info">
+                    <h2 class="projects__name">Бережная доставка</h2>
+                    <p class="projects__description">Качественная и быстрая доставка без с сохранением композиции</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--seven">
+                <div class="projects__info">
+                    <h2 class="projects__name">Многолетние растения</h2>
+                    <p class="projects__description">Многолетние, неприхотливые растения, не требующие тщательного ухода</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--eight">
+                <div class="projects__info">
+                    <h2 class="projects__name">marry me</h2>
+                    <p class="projects__description">Флористическое оформление свадебных торжеств</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--nine">
+                <div class="projects__info">
+                    <h2 class="projects__name">Цветочные композиции</h2>
+                    <p class="projects__description">Создаем композиции любых размеров</p>
+                </div>
+                <div class="projects__like like">
+                    <button class="like__btn">
+                        <svg>
+                            <use xlink:href="/img/symbol/sprite.svg#heart"></use>
+                        </svg>
+                    </button>
+                    <span class="like__counts">+ 120</span>
+                </div>
+            </div>
+            <div class="projects__element projects__element--ten">
+            </div>
+        </section>
+        <section class="studio">
+            <div class="studio__left">
+                <h2 class="studio__title">Студия</h2>
+            </div>
+            <div class="studio__right">
+                <div class="studio__information">
+                    <p class="studio__text studio__text--bold-italic">Наша студия предлагает широкий спектр услуг по флористическому оформлению интерьера и фитодизайну. </p>
+                    <p class="studio__text studio__text--bold-italic">Мы одна из немногих студий, которая специализируется на создании композиций из многолетних неприхотливых растений и сухоцветов. 
+                    </p>
+                    <p class="studio__text">Специалисты нашего творческого коллектива имеют большой опыт флористического оформления интерьеров и различных мероприятий. Большой накопленный опыт позволяет справится с задачами различного уровня сложности.</p>
+                    <p class="studio__text">Наличие собственной оранжерее, в которой выращивается большое количество различных видов растений, позволяет создавать элементы декора из самого свежего материала. </p>
+                    <p class="studio__text">Мы сможем сделать Ваш интерьер живым и неповторимым, а торжественные мероприятия незабываемыми. Мы всегда будем рады Вам!
+                    </p>
+                </div>
+                <div class="studio__description">
+                    <picture>
+                        <source media="(min-width: 1500px)"
+                                srcset="/img/studio-img.jpg">
+                        <img class="studio__img" src="/img/studio-img.jpg"
+                            srcset="/img/studio-img.jpg 1x,
+                                    /img/studio-img.jpg 2x">
+
+                    </picture>
+                    <h3 class="studio__subtitle">Flowers gor joy</h3>
+                    <ul class="studio__list">
+                        <li class="studio__list-item">Фитодизайн инотерьеров</li>
+                        <li class="studio__list-item">Флористические композиции</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="studio__staff">
+                <p class="studio__staff-title">Оформление мероприятий</p>
+                <p class="studio__staff-text">Благодаря использованию в дизайне неприхотливых живых растений и сухоцветий, флористическое оформления торжества не требует специального ухода и способно выполнять свои декоративные функции, даже если мероприятия затянется на несколько дней.</p>
+                <p class="studio__staff-text">Вам не нужно заботится о поливе растений, проветривании перемещений и освещенности. Наши цветочные композиции устойчивы к любым условиям.</p>
+            </div>
+            <div class="studio__persons">
+                <ul class="persons">
+                    <li class="persons__item">
+                        <picture>
+                            <source media="(min-width: 1500px)"
+                                    srcset="/img/person1.jpg"
+                            >
+                            <img
+                                    class="persons__img"
+                                    src="/img/person1.jpg"
+                                    srcset="/img/person1.jpg 1x,
+                                            /img/person1.jpg 2x"
+                                    alt="philippe starck">
+                        </picture>
+                        <p class="persons__name">Фитодизайн офисов</p>
+                    </li>
+                    <li class="persons__item">
+                        <picture>
+                            <source media="(min-width: 1500px)"
+                                    srcset="/img/person2.jpg"
+                            >
+                            <img
+                                    class="persons__img"
+                                    src="/img/person1.jpg"
+                                    srcset="/img/person2.jpg 1x,
+                                            /img/person2.jpg 2x"
+                                    alt="philippe starck">
+                        </picture>
+                        <p class="persons__name">Оформление банкетов</p>
+                    </li>
+                    <li class="persons__item">
+                        <picture>
+                            <source media="(min-width: 1500px)"
+                                    srcset="/img/person3.jpg"
+                            >
+                            <img
+                                    class="persons__img"
+                                    src="/img/person1.jpg"
+                                    srcset="/img/person3.jpg 1x,
+                                            /img/person3.jpg 2x"
+                                    alt="philippe starck">
+                        </picture>
+                        <p class="persons__name">Фитодизайн домашних интерьеров</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="blog">
+            <div class="blog__left">
+                <h1 class="blog__title">Блог</h1>
+            </div>
+            <div class="blog__right">
+                <ul class="blog__list posts">
+                    <li class="posts__list-item">
+                        <h2 class="posts__title">Полезно и важно знать</h2>
+                        <picture>
+                            <source media="(min-width: 1500px)"
+                                    srcset="/img/posts1.jpg"
+                            >
+                            <img
+                                    class="posts__img"
+                                    src="/img/person1.jpg"
+                                    srcset="/img/posts1.jpg 1x,
+                                            /img/posts.jpg 2x"
+                                    alt="posts one">
+                        </picture>
+                        <p class="posts__text">Несмотря на то, что наши цветочные композиции совсем неприхотливы и не требуют особых условий ухода за ними, однако, если вы хотите, чтобы они Вам прослужили как можно дольше, следует выполнить ряд минимальных рекомендаций...</p>
+                        <span class="posts__bottom-line"></span>
+                    </li>
+                    <li class="posts__list-item">
+                        <h2 class="posts__title">Правельный полив</h2>
+                        <picture>
+                            <source media="(min-width: 1500px)"
+                                    srcset="/img/posts2.jpg"
+                            >
+                            <img
+                                    class="posts__img"
+                                    src="/img/person1.jpg"
+                                    srcset="/img/posts2.jpg 1x,
+                                            /img/posts2.jpg 2x"
+                                    alt="posts two">
+                        </picture>
+                        <p class="posts__text">Наши живые цветы, хотя не требуют постоянного полива, все же нуждается во влаге. Советы по правильному поливу...</p>
+                        <span class="posts__bottom-line"></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer">
+
+            <div class="footer__right">
+                <div class="footer__right-box">
+                    <div class="footer__contacts">
+                        <p class="footer__address">
+                            Москва<br /> ул. Уличная <br />д. 1, корп. 1
+                        </p>
+                        <p class="footer__tel-mail">
+                            <a class="footer__tel" href="tel:+7495000000">+7(495)000-00-00</a>
+                            <br />
+                            <a class="footer__mail" href="mailto:info@ffj.com">info@ffj.com</a>
+                        </p>
+                        
+                    </div>
+                    <div class="footer__logo">
+                        <img src="/img/logo.jpg" class="footer__logo-img" />
+                        <p class="footer__slogan">Студиа<br /> флористики и<br /> фитодизайна</p>
+                        <ul class="footer__socials socials">
+                            <li class="socials__element">
+                                <a class="socials__link" aria-label="Facebook" href="#">
+                                    <svg class="socials__facebook">
+                                        <use xlink:href="/img/symbol/sprite.svg#fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__element">
+                                <a class="socials__link" aria-label="Twitter" href="#">
+                                    <svg class="socials__twitter">
+                                        <use xlink:href="/img/symbol/sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__element">
+                                <a class="socials__link" aria-label="Linkedin" href="#">
+                                    <svg class="socials__linkedin">
+                                        <use xlink:href="/img/symbol/sprite.svg#linked"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="socials__element">
+                                <a class="socials__link" aria-label="Google plus" href="#">
+                                    <svg class="socials__google">
+                                        <use xlink:href="/img/symbol/sprite.svg#google"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="footer__copyright">2021 Дизайн студия Flowors for Joy</p>
+            </div>
+            <div id="map" class="footer__left">
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.767266, 37.611031],
+                zoom: 15
+            });
+
+            myPlacemark1 = new ymaps.Placemark([55.767266, 37.611031], {
+      // Свойства.
+      // Содержимое хинта.
+      hintContent: 'Надпись, которая всплаывет при наведении на метку'
+    }, {
+      // Опции
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: '/img/marker.svg',
+      // Размеры метки.
+      iconImageSize: [40, 50],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-20, -50]
+    })
+  
+
+        // Добавляем все метки на карту.
+        myMap.geoObjects
+            .add(myPlacemark1)
+        }
+
+    </script> 
+</body>
+</html>
